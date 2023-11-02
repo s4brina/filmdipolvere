@@ -547,7 +547,7 @@ a:hover {
 
     .article {
         font-size: 13px;
-        width: 100%; /* Make the article full width on smaller screens */
+        width: 60%; /* Make the article full width on smaller screens */
     }
 }
 
