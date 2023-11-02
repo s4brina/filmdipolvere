@@ -136,7 +136,7 @@ img {
 
 @media screen and (max-width: 2000px) {
     .article_container {
-        width: 80%;
+        width: 60%;
     }
 }
 
@@ -525,7 +525,7 @@ a:hover {
 }
 
 .article {
-    width: 50%;
+    width: 30%;
     font-size: 16px;
     text-align: justify;
     font-family: 'Helvetica Neue';
@@ -537,12 +537,12 @@ a:hover {
 
 @media screen and (max-width: 800px) {
     .article_container {
-        width: 80%;
+        width: 60%;
     }
 }
 
     .article_container {
-        width: 80%;
+        width: 60%;
     }
 
     .article {
