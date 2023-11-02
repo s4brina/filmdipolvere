@@ -525,7 +525,7 @@ a:hover {
 }
 
 .article {
-    width: 30%;
+    width: 40%;
     font-size: 16px;
     text-align: justify;
     font-family: 'Helvetica Neue';
@@ -537,17 +537,17 @@ a:hover {
 
 @media screen and (max-width: 800px) {
     .article_container {
-        width: 60%;
+        width: 70%;
     }
 }
 
     .article_container {
-        width: 60%;
+        width: 70%;
     }
 
     .article {
         font-size: 13px;
-        width: 60%; /* Make the article full width on smaller screens */
+        width: 80%; /* Make the article full width on smaller screens */
     }
 }
 
