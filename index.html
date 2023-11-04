@@ -2,12 +2,10 @@
 <html class="home">
 
 <head>
-    <title>FiLM di POLVERE</title>
+    <title>Website</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-
     <style>
         /* Add this CSS for smooth transition */
         ul#navList li {
@@ -36,8 +34,8 @@
     <ul id="navList">
         <li><a href="cinema.html" id="cinematext">cinema</a></li>
         <li><a href="criticism.html" id="crittext">criticism</a></li>
-        <li><a href="filmography.html"id="filmtext">filmography</a></li>
-        <li ><a href="information.html" id="infotext">information</a></li>
+        <li><a href="filmography.html" id="filmtext">filmography</a></li>
+        <li><a href="information.html" id="infotext">information</a></li>
     </ul>
 
     <main class="main-content">
@@ -68,6 +66,11 @@
                 return { x: randomX, y: randomY };
             }
 
+            function getRandomFontSize() {
+                // Generate a random font size between 12px and 30px
+                return Math.floor(Math.random() * (70 - 30 + 1)) + 30 + "px";
+            }
+
             refreshButton.addEventListener("click", function () {
                 const existingPositions = [];
                 listItems.forEach(item => {
@@ -75,6 +78,8 @@
                     do {
                         newPosition = getRandomPosition(item);
                     } while (existingPositions.some(pos => isOverlapping(pos, newPosition)));
+                    const anchor = item.querySelector("a"); // Get the anchor element
+                    anchor.style.fontSize = getRandomFontSize(); // Apply random font size to the anchor
                     item.style.transform = `translate(${newPosition.x}px, ${newPosition.y}px)`;
                     existingPositions.push(newPosition);
                 });
@@ -87,12 +92,10 @@
                 return distance < 350; // Adjust this threshold as needed
             }
 
-            // Initial random positioning
+            // Initial random positioning and font size
             refreshButton.click();
         });
     </script>
 </body>
 
 </html>
-
-
